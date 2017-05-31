@@ -105,7 +105,7 @@ if (isset($_SESSION["staff_number"]) && isset($_SESSION["modify_right"])) {
                         <h4 class="modal-title">关于</h4>
                     </div>
                     <div class="modal-body">
-                        <p>一个基本的工资管理系统的实现，基于 Apache - PHP - MySQL 开发。</p>
+                        <p>一个基本的工资管理系统的实现，基于 Apache - PHP - MySQL 开发。源码下载：https://github.com/udidi/WageManagerSystem</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">了解了</button>

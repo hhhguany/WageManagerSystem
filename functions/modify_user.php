@@ -11,7 +11,7 @@ $reenter_password = $_POST["reenter_password"];
 
 
 if ($_POST) {
-    if (strlen($staff_number) == 6 && !preg_match("/[^\d-., ]/", $staff_number)) {
+    if (strlen($staff_number) == 6 && !preg_match("/[^\d ]/", $staff_number)) {
         if (strlen($staff_name) <= 20 && strlen($staff_name) > 0) {
             if ($staff_password == $reenter_password) {
                 if (strlen($staff_password) <= 20 && strlen($staff_password) >= 6) {

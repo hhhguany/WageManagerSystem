@@ -7,7 +7,7 @@ $wage = $_POST["wage"];
 
 if ($_POST) {
     if (strlen($title_name) <= 20 && strlen($title_name) > 0) {
-        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d-., ]/", $wage)) {
+        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d ]/", $wage)) {
             $add_course_query = "
 UPDATE `professional_title` SET 
 `title_name` = '$title_name',

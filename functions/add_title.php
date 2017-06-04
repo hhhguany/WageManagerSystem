@@ -8,7 +8,7 @@ $title_code=$query_all_title_result->num_rows;
 
 if ($_POST) {
     if (strlen($title_name) <= 20 && strlen($staff_name) > 0) {
-        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d-., ]/", $wage)) {
+        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d ]/", $wage)) {
             $add_course_query = "INSERT INTO `professional_title` (`title_code`, `title_name`, `wage`) VALUES ('$title_code', '$title_name', '$wage')";
             if ($con->query($add_course_query)) {
                 echo '<script>alert("添加成功，请继续");location.href="../admin.php";</script>';

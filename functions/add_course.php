@@ -8,10 +8,10 @@ $class_size= $_POST["class_size"];
 
 
 if ($_POST) {
-    if (strlen($course_number) == 6 && !preg_match("/[^\d-., ]/", $course_number)) {
+    if (strlen($course_number) == 6 && !preg_match("/[^\d ]/", $course_number)) {
         if (strlen($course_name) <= 30 && strlen($course_name) > 0) {
-            if (strlen($lesson_number)<=11 && strlen($lesson_number)>0 && !preg_match("/[^\d-., ]/", $lesson_number)){
-                if (strlen($class_size)<=11 && strlen($class_size)>0 && !preg_match("/[^\d-., ]/", $class_size)){
+            if (strlen($lesson_number)<=11 && strlen($lesson_number)>0 && !preg_match("/[^\d ]/", $lesson_number)){
+                if (strlen($class_size)<=11 && strlen($class_size)>0 && !preg_match("/[^\d ]/", $class_size)){
                     $add_course_query="INSERT INTO `course` (`course_number`, `course_name`, `lesson_number`, `class_size`) VALUES ('$course_number', '$course_name', '$lesson_number','$class_size')";
                     if ($con->query($add_course_query)) {
                         echo '<script>alert("添加成功，请继续");location.href="../admin.php";</script>';

@@ -7,10 +7,10 @@ $lesson_number = $_POST["lesson_number"];
 $class_size = $_POST["class_size"];
 
 if ($_POST) {
-    if (strlen($course_number) == 6 && !preg_match("/[^\d-., ]/", $course_number)) {
+    if (strlen($course_number) == 6 && !preg_match("/[^\d ]/", $course_number)) {
         if (strlen($course_name) <= 30 && strlen($course_name) > 0) {
-            if (strlen($lesson_number)<=11 && strlen($lesson_number)>0 && !preg_match("/[^\d-., ]/", $lesson_number)){
-                if (strlen($class_size)<=11 && strlen($class_size)>0 && !preg_match("/[^\d-., ]/", $class_size)){
+            if (strlen($lesson_number)<=11 && strlen($lesson_number)>0 && !preg_match("/[^\d ]/", $lesson_number)){
+                if (strlen($class_size)<=11 && strlen($class_size)>0 && !preg_match("/[^\d ]/", $class_size)){
 
                     $modify_course_query = "UPDATE `course` SET 
 `course_name` = '$course_name', 

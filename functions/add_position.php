@@ -8,7 +8,7 @@ $position_code=$query_all_position_result->num_rows;
 
 if ($_POST) {
     if (strlen($position_name) <= 20 && strlen($position_name) > 0) {
-        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d-., ]/", $wage)) {
+        if (strlen($wage) <= 11 && strlen($wage) >0 && !preg_match("/[^\d ]/", $wage)) {
             $add_course_query = "INSERT INTO `staff_position` (`position_code`, `position_name`, `wage`) VALUES ('$position_code', '$position_name', '$wage')";
             if ($con->query($add_course_query)) {
                 echo '<script>alert("添加成功，请继续");location.href="../admin.php";</script>';

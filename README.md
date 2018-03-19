@@ -7,8 +7,8 @@
 Apache Mysql php
 
 ## 使用方法 ##
-1.将wage_manage.sql导入mysql数据库
-2.更改用户名密码字段
+1.将wage_manage.sql导入mysql数据库  
+2.更改用户名密码字段  
 3。将其他文件直接放在网站下进行访问即可
 
 ## 其他说明 ##
